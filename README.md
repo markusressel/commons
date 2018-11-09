@@ -18,7 +18,9 @@ in your project build.gradle file and
         ...
     
         // choose the ones you need
+        implementation("com.github.markusressel.commons:android_core:+")
         implementation("com.github.markusressel.commons:android_themes:+")
+        implementation("com.github.markusressel.commons:android_material:+")
         implementation("com.github.markusressel.commons:logging:+")
         implementation("com.github.markusressel.commons:random:+")
     }
