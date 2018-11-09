@@ -17,7 +17,7 @@ import androidx.core.content.ContextCompat
  * @return Color as Int
  */
 @ColorInt
-fun Context.getThemeAttrColor(@AttrRes attr: Int): Int {
+fun Context.getThemeAttrColor(@AttrRes attr: Int, @ColorInt default: Int = 0): Int {
     val typedValue = TypedValue()
     if (this.theme.resolveAttribute(attr, typedValue, true)) {
         if (typedValue.type >= TypedValue.TYPE_FIRST_INT && typedValue.type <= TypedValue.TYPE_LAST_INT) {
@@ -27,7 +27,7 @@ fun Context.getThemeAttrColor(@AttrRes attr: Int): Int {
         }
     }
 
-    return 0
+    return default
 }
 
 /**
