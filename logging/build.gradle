@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'com.github.dcendents.android-maven'
 group = rootProject.ext.group
@@ -14,7 +12,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -27,11 +24,7 @@ android {
 }
 
 dependencies {
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation "androidx.test:runner:1.1.0"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.1.0"
+    implementation project(':core')
 }
 
 // build a jar with source files
