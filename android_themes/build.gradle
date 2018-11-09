@@ -27,7 +27,6 @@ android {
 }
 
 dependencies {
-    implementation project(':core')
     implementation project(':android_core')
     implementation "androidx.core:core:1.0.0"
 }
