@@ -17,9 +17,10 @@ in your project build.gradle file and
     dependencies {
         ...
     
-        def markusresselCommonsVersion = "v1.0.0"
         // choose the ones you need
-        implementation("com.github.markusressel.commons:themes:${markusresselCommonsVersion}")
+        implementation("com.github.markusressel.commons:android_themes:+")
+        implementation("com.github.markusressel.commons:logging:+")
+        implementation("com.github.markusressel.commons:random:+")
     }
 
 in your desired module `build.gradle` file.
