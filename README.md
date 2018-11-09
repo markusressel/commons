@@ -17,7 +17,7 @@ in your project build.gradle file and
     dependencies {
         ...
     
-        def markusresselCommons = "v1.0.0"
+        def markusresselCommonsVersion = "v1.0.0"
         // choose the ones you need
         implementation("com.github.markusressel.commons:themes:${markusresselCommonsVersion}")
     }
