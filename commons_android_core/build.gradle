@@ -27,7 +27,9 @@ android {
 }
 
 dependencies {
-    implementation project(':core')
+    api project(':commons_core')
+
+    api "androidx.annotation:annotation:1.0.0"
 }
 
 // build a jar with source files

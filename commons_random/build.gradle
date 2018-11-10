@@ -23,12 +23,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
-    implementation project(':android_core')
-    implementation "androidx.core:core:1.0.0"
+    implementation project(':commons_core')
 }
 
 // build a jar with source files

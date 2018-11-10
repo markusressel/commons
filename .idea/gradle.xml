@@ -8,12 +8,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/android_core" />
-            <option value="$PROJECT_DIR$/android_material" />
-            <option value="$PROJECT_DIR$/android_themes" />
-            <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/logging" />
-            <option value="$PROJECT_DIR$/random" />
+            <option value="$PROJECT_DIR$/commons_android_core" />
+            <option value="$PROJECT_DIR$/commons_android_material" />
+            <option value="$PROJECT_DIR$/commons_android_themes" />
+            <option value="$PROJECT_DIR$/commons_core" />
+            <option value="$PROJECT_DIR$/commons_logging" />
+            <option value="$PROJECT_DIR$/commons_random" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

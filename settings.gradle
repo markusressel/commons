@@ -1,1 +1,1 @@
-include ':android_themes', ':core', ':random', ':android_core', ':logging', ':android_material'
+include ':commons_android_themes', ':commons_core', ':commons_random', ':commons_android_core', ':commons_logging', ':commons_android_material'
