@@ -19,11 +19,9 @@ fun View.snack(
 ) {
     val snackbar = Snackbar.make(this, text, duration)
     if (actionTitle != null && action != null) {
-        snackbar
-            .setAction(actionTitle, action)
+        snackbar.setAction(actionTitle, action)
     }
-    snackbar
-        .show()
+    snackbar.show()
 }
 
 /**

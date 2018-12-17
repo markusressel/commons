@@ -9,8 +9,7 @@ import android.view.LayoutInflater
  * Create a layout inflater from this context
  */
 fun Context.layoutInflater(): LayoutInflater {
-    return LayoutInflater
-        .from(this)
+    return LayoutInflater.from(this)
 }
 
 /**
@@ -19,9 +18,12 @@ fun Context.layoutInflater(): LayoutInflater {
  * @param resID file resource
  */
 fun resourceToURL(context: Context, resID: Int): String {
-    return ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + context.resources.getResourcePackageName(resID) + '/'.toString() + context.resources.getResourceTypeName(
-        resID
-    ) + '/'.toString() + context.resources.getResourceEntryName(resID)
+    val scheme = ContentResolver.SCHEME_ANDROID_RESOURCE
+    val packageName = context.resources.getResourcePackageName(resID)
+    val typeName = context.resources.getResourceTypeName(resID)
+    val entryName = context.resources.getResourceEntryName(resID)
+
+    return "$scheme://$packageName/$typeName/$entryName"
 }
 
 /**
@@ -31,6 +33,5 @@ fun resourceToURL(context: Context, resID: Int): String {
  * @param resID file resource
  */
 fun resourceToUri(context: Context, resID: Int): Uri {
-    return Uri
-        .parse(resourceToURL(context, resID))
+    return Uri.parse(resourceToURL(context, resID))
 }

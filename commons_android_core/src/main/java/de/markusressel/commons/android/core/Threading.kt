@@ -16,8 +16,7 @@ fun Any.doAsync(handler: () -> Unit) {
             handler()
             return null
         }
-    }
-        .execute()
+    }.execute()
 }
 
 /**
