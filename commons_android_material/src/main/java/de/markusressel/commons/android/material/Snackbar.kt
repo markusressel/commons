@@ -16,14 +16,13 @@ fun View.snack(
     text: String, duration: Int = Snackbar.LENGTH_SHORT,
     actionTitle: String? = null,
     action: ((View) -> Unit)? = null
-) {
+): Snackbar {
     val snackbar = Snackbar.make(this, text, duration)
     if (actionTitle != null && action != null) {
-        snackbar
-            .setAction(actionTitle, action)
+        snackbar.setAction(actionTitle, action)
     }
-    snackbar
-        .show()
+    snackbar.show()
+    return snackbar
 }
 
 /**
@@ -38,8 +37,8 @@ fun View.snack(
     @StringRes text: Int, duration: Int = Snackbar.LENGTH_SHORT,
     actionTitle: String? = null,
     action: ((View) -> Unit)? = null
-) {
-    snack(context.getString(text), duration, actionTitle, action)
+): Snackbar {
+    return snack(context.getString(text), duration, actionTitle, action)
 }
 
 /**
@@ -53,6 +52,6 @@ fun View.snack(
 fun View.snack(
     @StringRes text: Int, duration: Int = Snackbar.LENGTH_SHORT, @StringRes actionTitle: Int,
     action: ((View) -> Unit)
-) {
-    snack(context.getString(text), duration, context.getString(actionTitle), action)
+): Snackbar {
+    return snack(context.getString(text), duration, context.getString(actionTitle), action)
 }

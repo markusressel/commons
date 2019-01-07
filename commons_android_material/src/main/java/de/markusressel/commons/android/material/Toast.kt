@@ -9,11 +9,12 @@ import androidx.annotation.StringRes
  *
  * @param text the toast message
  * @param duration the length to show the toast, one of Toast.LENGTH_SHORT, Toast.LENGTH_LONG
+ * @return the toast instance
  */
-fun Context.toast(text: String, duration: Int = Toast.LENGTH_SHORT) {
-    Toast
-        .makeText(this, text, duration)
-        .show()
+fun Context.toast(text: String, duration: Int = Toast.LENGTH_SHORT): Toast {
+    val toast = Toast.makeText(this, text, duration)
+    toast.show()
+    return toast
 }
 
 /**
@@ -21,7 +22,8 @@ fun Context.toast(text: String, duration: Int = Toast.LENGTH_SHORT) {
  *
  * @param text the toast message
  * @param duration the length to show the toast, one of Toast.LENGTH_SHORT, Toast.LENGTH_LONG
+ * @return the toast instance
  */
-fun Context.toast(@StringRes text: Int, duration: Int = Toast.LENGTH_SHORT) {
-    toast(this.getString(text), duration)
+fun Context.toast(@StringRes text: Int, duration: Int = Toast.LENGTH_SHORT): Toast {
+    return toast(this.getString(text), duration)
 }
