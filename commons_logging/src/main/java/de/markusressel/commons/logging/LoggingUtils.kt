@@ -6,3 +6,8 @@ package de.markusressel.commons.logging
 fun Throwable.prettyPrint(): String {
     return "${this.message}:\n" + "${stackTrace.joinToString(separator = "\n")}}"
 }
+
+/**
+ * Create a logger TAG
+ */
+fun Any.createLoggingTag(): String = this.javaClass.simpleName.slice(0..23)
