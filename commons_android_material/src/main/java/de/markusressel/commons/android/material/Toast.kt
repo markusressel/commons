@@ -11,11 +11,10 @@ import androidx.annotation.StringRes
  * @param duration the length to show the toast, one of Toast.LENGTH_SHORT, Toast.LENGTH_LONG
  * @return the toast instance
  */
-fun Context.toast(text: String, duration: Int = Toast.LENGTH_SHORT) :
-    Toast
-        {
+fun Context.toast(text: String, duration: Int = Toast.LENGTH_SHORT): Toast {
     val toast = Toast.makeText(this, text, duration)
-        toast.show()return toast
+    toast.show()
+    return toast
 }
 
 /**
