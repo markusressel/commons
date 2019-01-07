@@ -11,6 +11,7 @@ import com.google.android.material.snackbar.Snackbar
  * @param duration the length to show the toast, one of Snackbar.LENGTH_SHORT, Snackbar.LENGTH_LONG
  * @param actionTitle the title of the action button (or null)
  * @param action the action for the action button
+ * @return the snackbar instance
  */
 fun View.snack(
     text: String, duration: Int = Snackbar.LENGTH_SHORT,
@@ -32,6 +33,7 @@ fun View.snack(
  * @param duration the length to show the toast, one of Snackbar.LENGTH_SHORT, Snackbar.LENGTH_LONG
  * @param actionTitle the title of the action button (or null)
  * @param action the action for the action button
+ * @return the snackbar instance
  */
 fun View.snack(
     @StringRes text: Int, duration: Int = Snackbar.LENGTH_SHORT,
@@ -48,6 +50,7 @@ fun View.snack(
  * @param duration the length to show the toast, one of Snackbar.LENGTH_SHORT, Snackbar.LENGTH_LONG
  * @param actionTitle the title of the action button
  * @param action the action for the action button
+ * @return the snackbar instance
  */
 fun View.snack(
     @StringRes text: Int, duration: Int = Snackbar.LENGTH_SHORT, @StringRes actionTitle: Int,
